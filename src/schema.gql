@@ -1,0 +1,46 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type User {
+  id: ID!
+  nickname: String!
+  password: String!
+  name: String!
+  birthday_date: String!
+}
+
+type UserPost {
+  id: ID!
+  owner_id: Int!
+  title: String!
+  text_content: String!
+}
+
+type Query {
+  getUser(id: Int!): User!
+  searchUsersByNickname(nickname: String!): [User!]
+  getUserPosts(userId: Int!): [UserPost!]
+  getUsersLikeState(post_id: Int!, user_id: Int!): Boolean!
+  getPostLikesCount(post_id: Int!): Int!
+}
+
+type Mutation {
+  createUser(createUser: UserCreate!): User!
+  authUser(nickname: String!, password: String!): User
+  createUserPost(userPost: UserPostCreate!): UserPost!
+  postLikeMethod(post_id: Int!, user_id: Int!): Boolean!
+}
+
+input UserCreate {
+  nickname: String!
+  password: String!
+  name: String!
+  birthday_date: String!
+}
+
+input UserPostCreate {
+  owner_id: ID!
+  title: String!
+  text_content: String!
+}
