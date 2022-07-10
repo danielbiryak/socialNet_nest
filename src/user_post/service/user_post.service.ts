@@ -1,7 +1,7 @@
 import { Injectable } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
-import { UserPostEntity } from 'src/entity/user_post.entity';
-import { UserPostInput } from 'src/gql/input/user_post_create.input';
+import { UserPostEntity } from '../../entity/user_post.entity';
+import { UserPostInput } from '../../gql/input/user_post_create.input';
 import { Repository } from 'typeorm';
 
 @Injectable()

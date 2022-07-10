@@ -1,5 +1,5 @@
 import { Args, Int, Mutation, Query, Resolver } from '@nestjs/graphql';
-import { PostLikeDTO } from 'src/gql/type/post_like.dto';
+import { PostLikeDTO } from '../../gql/type/post_like.dto';
 import { PostLikeService } from '../service/post_like.service';
 
 @Resolver(() => PostLikeDTO)

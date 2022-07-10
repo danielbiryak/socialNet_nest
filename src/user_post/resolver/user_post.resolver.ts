@@ -1,6 +1,6 @@
 import { Args, Int, Mutation, Query, Resolver } from '@nestjs/graphql';
-import { UserPostInput } from 'src/gql/input/user_post_create.input';
-import { UserPostDTO } from 'src/gql/type/user_post.dto';
+import { UserPostInput } from '../../gql/input/user_post_create.input';
+import { UserPostDTO } from '../../gql/type/user_post.dto';
 import { UserPostService } from '../service/user_post.service';
 
 @Resolver(() => UserPostDTO)
